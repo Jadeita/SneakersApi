@@ -1,0 +1,10 @@
+{% block body %}
+
+<h2>CRUD</h2> <br> {% for abarrote in abarrotes %}
+
+<li> {{ abarrote.name }}, {{ abarrote.list_price }},{{ abarrote.default_code }},<img src="{{ abarrote.description_picking }}" /> </li>
+
+
+{% endfor %}
+
+<br><br> {% endblock %}
