@@ -1,0 +1,44 @@
+{% load static %} {% block body %}
+
+
+<link rel="stylesheet" href="static/register.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body class="jade"></body>
+<form method="POST">
+    {% csrf_token %}
+    <img class="img-thumbnail" width="30%" height="50%" src="static/image/sneakers.png" />
+    <br>
+    <label>
+        <p class="label-txt">ENTER YOUR EMAIL</p>
+        <input type="text" class="input" name="email">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        </label>
+    <br>
+    <label>
+        <p class="label-txt">ENTER YOUR USERNAME</p>
+        <input type="text" class="input" name="username">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        </label>
+    <br>
+    <label>
+        <p class="label-txt">ENTER YOUR PASSWORD</p>
+        <input type="text" class="input" name="password">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        </label>
+    <br><br>
+
+    <button type="submit">Registrarse</button>
+    <a href="{% url 'login' %}">¿Ya tienes cuenta?</a>
+</form>
+</body>
+{% endblock %}
